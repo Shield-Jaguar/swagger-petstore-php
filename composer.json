@@ -1,0 +1,47 @@
+{
+    "name": "apimatic/swaggerpetstore",
+    "description": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    "type": "library",
+    "keywords": [
+        "Swagger Petstore",
+        "API",
+        "SDK"
+    ],
+    "homepage": "https://www.apimatic.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIMatic Code Generator",
+            "email": "support@apimatic.io",
+            "homepage": "https://www.apimatic.io",
+            "role": "API Tool"
+        }
+    ],
+    "require": {
+        "php": ">=7.2 <8.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "apimatic/unirest-php": "^3.0.1",
+        "apimatic/jsonmapper": "^3.0.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "5.3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SwaggerPetstoreLib\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SwaggerPetstoreLib\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": "phpcs --standard=phpcs-ruleset.xml src/",
+        "lint-fix": "phpcbf --standard=phpcs-ruleset.xml src/",
+        "analyze": "phan --allow-polyfill-parser"
+    }
+}
